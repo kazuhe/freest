@@ -4,6 +4,8 @@
 import React from 'react'
 import { NextPage, GetStaticProps } from 'next'
 import Link from 'next/link'
+import { CardContainer } from 'components/card'
+import styles from 'styles/pages/index.module.scss'
 
 /*
  * Types
@@ -17,18 +19,17 @@ type Props = {
  */
 export const Illust: NextPage<Props> = (props) => (
   <div>
-    {props.blog.map((blog) => (
-      <ul key={blog.id}>
-        <li>
+    <ul className={styles.cardList}>
+      {props.blog.map((blog) => (
+        <li key={blog.id}>
           <Link href={`/illust/${blog.id}`} passHref>
             <a>
-              <h2>{blog.title}</h2>
-              <img src={blog.image.url} width="300" alt="" />
+              <CardContainer title={blog.title} image={blog.image.url} />
             </a>
           </Link>
         </li>
-      </ul>
-    ))}
+      ))}
+    </ul>
   </div>
 )
 

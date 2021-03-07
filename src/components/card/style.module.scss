@@ -1,0 +1,28 @@
+.card {
+  padding: 0 15px;
+  
+  &_inner {
+    box-shadow: inset -1px 0 0 0 rgb(224 227 231 / 60%), inset 0 -1px 0 0 #e0e4e7, inset 1px 0 0 0 rgb(224 227 231 / 60%);
+    font-size: 1.4rem;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &_header {
+    padding: 15px;
+    background: #efefef;
+
+    & > img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &_body {
+    padding: 15px;
+  }
+
+  &_title {
+    font-size: 1.5rem;
+  }
+}
